@@ -5,24 +5,21 @@ let Promise = require("bluebird")
 
 const bower_file = "bower.json"
 
-let no_issue = () => [ vile.issue(vile.OK, bower_file) ]
-
-let punish = (plugin_data) => {
-  return new Promise((resolve, reject) => {
-    constable.list((available) => {
-      if (available.length > 0) {
-        resolve(_.map(available, (dep) => {
-          return vile.issue(
-            vile.WARNING, bower_file,
-            `${dep.name} (${dep.version} < ${dep.latest})`
-          )
-        }))
-      } else {
-        resolve(no_issue())
-      }
-    })
-  })
-}
+let punish = (plugin_data) =>
+  new Promise((resolve, reject) =>
+    constable.list((available) =>
+      resolve(available.length <= 0 ? [] :
+        _.map(available, (dep) =>
+          vile.issue({
+            type: vile.DEP,
+            path: bower_file,
+            message: `${dep.name} (${dep.version} < ${dep.latest})`,
+            name: dep.name,
+            current: dep.version,
+            latest: dep.latest,
+            signature: `constable::${dep.name}` +
+                        `::${dep.version}::${dep.latest})`
+          })))))
 
 module.exports = {
   punish: punish
