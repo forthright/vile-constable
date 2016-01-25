@@ -14,11 +14,13 @@ let punish = (plugin_data) =>
             type: vile.DEP,
             path: bower_file,
             message: `${dep.name} (${dep.version} < ${dep.latest})`,
-            name: dep.name,
-            current: dep.version,
-            latest: dep.latest,
             signature: `constable::${dep.name}` +
-                        `::${dep.version}::${dep.latest})`
+                        `::${dep.version}::${dep.latest})`,
+            dependency: {
+              name: dep.name,
+              current: dep.version,
+              latest: dep.latest
+            }
           })))))
 
 module.exports = {
