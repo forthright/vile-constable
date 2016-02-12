@@ -1,5 +1,5 @@
 {
-  "name": "@brentlintner/vile-constable",
+  "name": "@forthright/vile-constable",
   "version": "0.1.1",
   "description": "A vile plugin for constable",
   "main": "lib/index.js",
@@ -9,7 +9,7 @@
     "test": "bin/test"
   },
   "dependencies": {
-    "@brentlintner/vile": "^0.5.2",
+    "@forthright/vile": "^0.5.2",
     "babel": "^5.6.14",
     "bluebird": "^2.9.34",
     "constable": "^0.0.4",
