@@ -1,6 +1,6 @@
 {
   "name": "@forthright/vile-constable",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A vile plugin for constable",
   "main": "lib/index.js",
   "scripts": {
