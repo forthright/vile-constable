@@ -1,4 +1,4 @@
-let vile = require("@forthright/vile")
+let vile = require("vile")
 let _ = require("lodash")
 let constable = require("constable")
 let Promise = require("bluebird")
