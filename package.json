@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
-    "constable": "^0.0.6",
+    "constable": "^0.0.7",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
