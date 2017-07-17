@@ -1,6 +1,6 @@
 {
   "name": "vile-constable",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "A vile plugin for keeping up to date bower dependencies via constable",
   "main": "lib/index.js",
   "files": [
