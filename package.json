@@ -1,6 +1,6 @@
 {
   "name": "vile-constable",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Track outdated Bower dependencies.",
   "main": "lib/index.js",
   "files": [
